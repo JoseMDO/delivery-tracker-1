@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_13_221415) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_13_222928) do
   create_table "deliveries", force: :cascade do |t|
     t.integer "user_id"
     t.string "description"
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_13_221415) do
     t.date "supposed_to_arrive_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "arrived"
   end
 
   create_table "users", force: :cascade do |t|
